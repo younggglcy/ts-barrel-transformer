@@ -2,19 +2,17 @@
   "name": "ts-barrel-transformer",
   "version": "0.1.0",
   "description": "Barrel file tree-shaking transformer for ts-loader",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.cts",
+  "type": "module",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
   "exports": {
     ".": {
       "types": "./dist/index.d.mts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.mjs"
     },
     "./loader": {
       "types": "./dist/loader/barrel-loader.d.mts",
-      "import": "./dist/loader/barrel-loader.mjs",
-      "require": "./dist/loader/barrel-loader.cjs"
+      "import": "./dist/loader/barrel-loader.mjs"
     }
   },
   "files": [

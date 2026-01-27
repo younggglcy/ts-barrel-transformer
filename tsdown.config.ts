@@ -5,7 +5,7 @@ export default defineConfig({
     index: 'src/index.ts',
     'loader/barrel-loader': 'src/loader/barrel-loader.ts',
   },
-  format: ['cjs', 'esm'],
+  format: ['esm'],
   dts: true,
   clean: true,
   sourcemap: true,
