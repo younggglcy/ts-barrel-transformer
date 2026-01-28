@@ -1,0 +1,55 @@
+{
+  "name": "ts-barrel-transformer",
+  "version": "0.1.0",
+  "description": "Barrel file tree-shaking transformer for ts-loader",
+  "type": "module",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./loader": {
+      "types": "./dist/loader/barrel-loader.d.mts",
+      "import": "./dist/loader/barrel-loader.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "typescript",
+    "webpack",
+    "rspack",
+    "ts-loader",
+    "barrel",
+    "tree-shaking",
+    "transformer"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "peerDependencies": {
+    "typescript": "^5.0.0",
+    "webpack": "^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "webpack": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsdown": "^0.20.1",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0",
+    "webpack": "^5.0.0"
+  }
+}
